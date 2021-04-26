@@ -27,7 +27,7 @@ export const LoginScreen = () => {
           <p>Login with social networks</p>
           <GoogleButton />
         </div>
-        <Link to="/auth/register">Create new account</Link>
+        <Link className="link" to="/auth/register">Create new account</Link>
       </form>
     </>
   );
