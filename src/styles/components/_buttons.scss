@@ -8,12 +8,16 @@
   font-weight: bold;
   min-height: 40px;
   padding: 7px 10px;
+  transition: background-color 0.3s ease;
   &:focus {
     outline: none;
   }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 
-.btn-block{
+.btn-block {
   width: 100%;
 }
 

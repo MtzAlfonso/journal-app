@@ -1,5 +1,19 @@
+@font-face {
+  font-family: 'AvenirLTStd';
+  src: local('Avenir'),
+    url('../../fonts/AvenirLTStd-Roman.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLTStd';
+  src: local('Avenir'),
+    url('../../fonts/AvenirLTStd-Black.otf') format('opentype');
+  font-weight: bold;
+}
+
 * {
-  font-family: Avenir, Helvetica, Arial, Helvetica, sans-serif;
+  font-family: Avenir, AvenirLTStd, Helvetica, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
