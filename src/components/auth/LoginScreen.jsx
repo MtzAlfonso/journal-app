@@ -17,7 +17,7 @@ export const LoginScreen = () => {
         <input
           className="auth__input"
           type="password"
-          placeholder="password"
+          placeholder="Password"
           name="password"
         />
         <button className="btn btn-primary btn-block mt-3" type="submit">
@@ -27,7 +27,11 @@ export const LoginScreen = () => {
           <p>Login with social networks</p>
           <GoogleButton />
         </div>
-        <Link className="link" to="/auth/register">Create new account</Link>
+        <div className="text-center">
+          <Link className="link mt-5" to="/auth/register">
+            Create new account
+          </Link>
+        </div>
       </form>
     </>
   );

@@ -1,9 +1,46 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const RegisterScreen = () => {
   return (
-    <div>
-      <h1>RegisterScreen</h1>
-    </div>
+    <>
+      <h3 className="auth__title">Register</h3>
+      <form>
+        <input
+          className="auth__input"
+          type="name"
+          placeholder="Name"
+          name="name"
+          autocomplete="off"
+        />
+        <input
+          className="auth__input"
+          type="email"
+          placeholder="email@example.com"
+          name="email"
+          autocomplete="off"
+        />
+        <input
+          className="auth__input"
+          type="password"
+          placeholder="Password"
+          name="password"
+        />
+        <input
+          className="auth__input"
+          type="password"
+          placeholder="Confirm password"
+          name="password-confirmation"
+        />
+        <button className="btn btn-primary btn-block mt-3" type="submit">
+          Sign in
+        </button>
+        <div className="text-center mt-5">
+          <Link className="link" to="/auth/login">
+            Already registered?
+          </Link>
+        </div>
+      </form>
+    </>
   );
 };
