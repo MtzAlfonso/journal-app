@@ -1,0 +1,10 @@
+.text-center {
+  text-align: center;
+}
+.link {
+  color: $primary;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
