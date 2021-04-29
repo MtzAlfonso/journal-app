@@ -28,11 +28,12 @@
   background-color: $primary;
   &:disabled {
     background-color: lighten($primary, $amount: 15);
+    cursor: none;
   }
-  &:hover {
+  &:hover:enabled {
     background-color: darken($primary, $amount: 5);
   }
-  &:active {
+  &:active:enabled {
     background-color: darken($primary, $amount: 10);
   }
 }
