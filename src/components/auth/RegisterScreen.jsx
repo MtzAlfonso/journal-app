@@ -8,17 +8,17 @@ export const RegisterScreen = () => {
       <form>
         <input
           className="auth__input"
-          type="name"
+          type="text"
           placeholder="Name"
           name="name"
-          autocomplete="off"
+          autoComplete="off"
         />
         <input
           className="auth__input"
           type="email"
           placeholder="email@example.com"
           name="email"
-          autocomplete="off"
+          autoComplete="off"
         />
         <input
           className="auth__input"
