@@ -3,7 +3,7 @@
 }
 
 .journal__sidebar {
-  background-color: $dark-gray;
+  background-color: $secondary;
   color: $white;
   display: flex;
   flex-direction: column;
@@ -27,15 +27,20 @@
 
 .journal__new-entry {
   align-items: center;
+  border-radius: 3px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 30px;
-  transition: color 0.3s ease;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
   width: 100%;
   &:hover {
-    color: darken($white, 20);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }
 

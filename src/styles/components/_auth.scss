@@ -17,12 +17,13 @@
 .auth__title {
   color: darken($primary, $amount: 10);
   margin-bottom: 25px;
+  font-size: 1.5em;
 }
 
 .auth__input {
   color: $dark-gray;
   border: 0;
-  border-bottom: 1px solid lighten($dark-gray, $amount: 50);
+  border-bottom: 1px solid lighten($secondary, $amount: 50);
   font-size: 1em;
   height: 40px;
   margin-bottom: 10px;
