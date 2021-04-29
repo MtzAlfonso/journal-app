@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const GoogleButton = () => {
+export const GoogleButton = ({ onClick }) => {
   return (
-    <div className="google-btn">
+    <div className="google-btn" onClick={onClick}>
       <div className="google-icon-wrapper">
         <img
           className="google-icon"
