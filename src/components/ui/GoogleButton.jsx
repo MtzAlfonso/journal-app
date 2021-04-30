@@ -10,7 +10,7 @@ export const GoogleButton = ({ onClick }) => {
           alt="google button"
         />
       </div>
-      <p className="btn-text">Sign in with google</p>
+      <p className="btn-text">Login with google</p>
     </div>
   );
 };
