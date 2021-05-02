@@ -13,11 +13,16 @@ export const NotesAppBar = () => {
     dispatch(startSaveNote(note));
   };
 
+  const handleUploadPicture = () => {};
+
   return (
     <div className="notes__appbar">
       <span>{parsedDate.format('ll')}</span>
+      <input type="file" name="" />
       <div>
-        <button className="btn">Picture</button>
+        <button className="btn" onClick={handleUploadPicture}>
+          Picture
+        </button>
         <button className="btn" onClick={handleSaveNote}>
           Save
         </button>
