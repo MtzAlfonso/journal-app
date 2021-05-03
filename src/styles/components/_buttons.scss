@@ -1,7 +1,7 @@
 .btn {
   background-color: transparent;
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
   color: white;
   cursor: pointer;
   font-size: 0.85em;
@@ -41,7 +41,7 @@
 .google-btn {
   align-items: center;
   background-color: $google-blue;
-  border-radius: 2px;
+  border-radius: 5px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
   display: flex;
@@ -52,7 +52,7 @@
 
   .google-icon-wrapper {
     align-items: center;
-    border-radius: 2px 0 0 2px;
+    border-radius: 5px 0 0 5px;
     background-color: $white;
     display: flex;
     justify-content: center;

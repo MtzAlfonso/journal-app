@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2';
 import { db } from '../firebase/firebase-config';
+import { fileUpload } from '../helpers/fileUpload';
 import { loadNotes } from '../helpers/loadNotes';
 import { types } from '../types/types';
 
@@ -7,13 +8,12 @@ export const startNewNote = () => {
   return async (dispatch, getState) => {
     const { uid } = getState().auth;
     const newNote = {
-      title: 'Lorem, ipsum dolor',
-      body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit!',
+      title: '',
+      body: '',
       date: new Date().getTime(),
     };
 
     const docRef = await db.collection(`${uid}/journal/notes`).add(newNote);
-    console.log(docRef);
     dispatch(activeNote(docRef.id, newNote));
     dispatch(startLoadingNotes(uid));
   };
@@ -53,3 +53,22 @@ export const refreshNote = (id, note) => ({
   type: types.notesUpdate,
   payload: { id, note },
 });
+
+export const startUpload = (file) => {
+  return async (dispatch, getState) => {
+    const { active: note } = getState().notes;
+    Swal.fire({
+      title: 'Uploading...',
+      text: 'Please wait',
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+    });
+    const fileUrl = await fileUpload(file);
+    note.url = fileUrl;
+    dispatch(startSaveNote(note));
+    Swal.close();
+  };
+};

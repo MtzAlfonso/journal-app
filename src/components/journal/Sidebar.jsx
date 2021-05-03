@@ -20,16 +20,16 @@ export const Sidebar = () => {
     <aside className="journal__sidebar">
       <div className="journal__sidebar-navbar">
         <h3 className="">
-          <i className="fas fa-moon"></i>
+          <i className="fas fa-address-card"></i>
           <span>{name}</span>
         </h3>
         <button className="btn" onClick={handleLogout}>
-          Logout
+          <i className="fas fa-sign-out-alt"></i> Logout
         </button>
       </div>
       <div className="journal__new-entry" onClick={handleAddEntry}>
-        <i className="far fa-calendar-plus fa-4x"></i>
-        <p className="mt-3">New Entry</p>
+        <i className="far fa-calendar-plus fa-3x"></i>
+        <p className="mt-2">New Entry</p>
       </div>
       <JournalEntries />
     </aside>
