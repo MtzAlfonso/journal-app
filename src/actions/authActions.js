@@ -2,6 +2,7 @@ import Swal from 'sweetalert2';
 import { types } from '../types/types';
 import { firebase, googleAuthProvider } from '../firebase/firebase-config';
 import { finishLoading, startLoading } from './uiActions';
+import { noteLogout } from './notesActions';
 
 export const startLoginEmailPassword = (email, password) => {
   return (dispatch) => {
@@ -11,11 +12,6 @@ export const startLoginEmailPassword = (email, password) => {
       .signInWithEmailAndPassword(email, password)
       .then(({ user: { uid, displayName } }) => {
         dispatch(login(uid, displayName));
-        Swal.fire(
-          `Welcome ${displayName}`,
-          'you can add notes in your journal',
-          'success'
-        );
       })
       .catch(({ message }) => {
         Swal.fire('Auth error', message, 'error');
@@ -61,6 +57,7 @@ export const startLogout = () => {
   return async (dispatch) => {
     await firebase.auth().signOut();
     dispatch(logout());
+    dispatch(noteLogout());
   };
 };
 

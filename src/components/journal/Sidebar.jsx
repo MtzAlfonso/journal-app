@@ -19,8 +19,8 @@ export const Sidebar = () => {
   return (
     <aside className="journal__sidebar">
       <div className="journal__sidebar-navbar">
-        <h3 className="">
-          <i className="fas fa-address-card"></i>
+        <h3>
+          <i className="fas fa-user"></i>
           <span>{name}</span>
         </h3>
         <button className="btn" onClick={handleLogout}>

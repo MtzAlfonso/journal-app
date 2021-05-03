@@ -38,6 +38,24 @@
   }
 }
 
+.btn-danger {
+  background-color: $danger;
+  &:disabled {
+    background-color: lighten($danger, $amount: 15);
+    cursor: none;
+  }
+  &:hover:enabled {
+    background-color: darken($danger, $amount: 5);
+  }
+  &:active:enabled {
+    background-color: darken($danger, $amount: 10);
+  }
+}
+
+.border-radius-none{
+  border-radius: 0;
+}
+
 .google-btn {
   align-items: center;
   background-color: $google-blue;
