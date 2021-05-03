@@ -11,6 +11,11 @@ export const startLoginEmailPassword = (email, password) => {
       .signInWithEmailAndPassword(email, password)
       .then(({ user: { uid, displayName } }) => {
         dispatch(login(uid, displayName));
+        Swal.fire(
+          `Welcome ${displayName}`,
+          'you can add notes in your journal',
+          'success'
+        );
       })
       .catch(({ message }) => {
         Swal.fire('Auth error', message, 'error');

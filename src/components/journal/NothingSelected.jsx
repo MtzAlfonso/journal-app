@@ -4,9 +4,9 @@ export const NothingSelected = () => {
   return (
     <div className="nothing__main-content">
       <p>
-        Select something <br /> create an entry
+        Select an entry <br /> or <br /> add a new one
       </p>
-      <i className="far fa-star fa-3x"></i>
+      <i className="fas fa-book-open fa-3x"></i>
     </div>
   );
 };
